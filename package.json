@@ -1,0 +1,14 @@
+{
+  "name": "playwright-typescript-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "install-browsers": "npx playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}
