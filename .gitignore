@@ -1,4 +1,12 @@
 node_modules/
+
+# Maven / Java
+target/
+
+# Playwright artifacts
+playwright-report/
+test-results/
+artifacts.zip
 .playwright/
 coverage/
 dist/

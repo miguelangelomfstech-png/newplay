@@ -32,5 +32,63 @@
       },
       "problemMatcher": []
     }
+    ,
+    {
+      "label": "Maven: Run all tests",
+      "type": "shell",
+      "command": "./mvnw -B test",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Maven: Run single test (prompt)",
+      "type": "shell",
+      "command": "./mvnw -B -Dtest=${input:TestClass} test",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Maven: Run tests in Playwright container",
+      "type": "shell",
+      "command": "docker run --rm -v \"${workspaceFolder}\":/work -w /work --shm-size=1g mcr.microsoft.com/playwright:latest bash -lc \"mvn -B test\"",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Show Playwright report",
+      "type": "shell",
+      "command": "npx playwright show-report",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+  ,
+  "inputs": [
+    {
+      "id": "TestClass",
+      "type": "promptString",
+      "description": "Enter test class or method (e.g. com.example.tests.ExampleTest or ExampleTest#homepageHasTitle)",
+      "default": "com.example.tests.ExampleTest"
+    }
   ]
 }
