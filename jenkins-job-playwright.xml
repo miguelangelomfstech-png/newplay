@@ -18,7 +18,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>GIT_REPOSITORY_URL_PLACEHOLDER</url>
+          <url>https://github.com/miguelangelomfstech-png/newplay.git</url>
           <!-- Optional: <credentialsId>GIT_CREDENTIALS_ID</credentialsId> -->
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
